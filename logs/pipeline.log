@@ -1,0 +1,226 @@
+2026-03-31 08:23:08,775 - pipeline - INFO - ======================================================================
+2026-03-31 08:23:08,775 - pipeline - INFO - 🚀 RECOMART MASTER PIPELINE STARTED
+2026-03-31 08:23:08,775 - pipeline - INFO - ======================================================================
+2026-03-31 08:23:08,775 - pipeline - INFO - 
+📥 STEP 1: Data Ingestion (Shankar)
+2026-03-31 08:23:08,775 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 08:23:11,116 - pipeline - INFO - ✅ Ingestion completed successfully
+2026-03-31 08:23:11,116 - pipeline - INFO - 
+🧼 STEP 2: Data Processing & Validation (Prashansa)
+2026-03-31 08:23:11,116 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 08:23:11,117 - pipeline - INFO - ⏳ Waiting for processing module... (scripts/data_processing.py)
+2026-03-31 08:23:11,117 - pipeline - INFO - 
+🏗️  STEP 3: Feature Engineering (Aniket)
+2026-03-31 08:23:11,117 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 08:23:11,118 - pipeline - INFO - ⏳ Waiting for feature engineering module... (scripts/feature_engineering.py)
+2026-03-31 08:23:11,118 - pipeline - INFO - 
+🤖 STEP 4: Model Training & Evaluation (Flavia)
+2026-03-31 08:23:11,118 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 08:23:11,118 - pipeline - INFO - ⏳ Waiting for model training module... (scripts/model_training.py)
+2026-03-31 08:23:11,118 - pipeline - INFO - 
+======================================================================
+2026-03-31 08:23:11,118 - pipeline - INFO - ✅ PIPELINE FRAMEWORK READY
+2026-03-31 08:23:11,118 - pipeline - INFO - ======================================================================
+2026-03-31 08:23:11,118 - pipeline - INFO - 
+Team members: Implement your modules in the scripts/ folder:
+2026-03-31 08:23:11,118 - pipeline - INFO -   - Prashansa: scripts/data_processing.py
+2026-03-31 08:23:11,118 - pipeline - INFO -   - Aniket: scripts/feature_engineering.py
+2026-03-31 08:23:11,118 - pipeline - INFO -   - Flavia: scripts/model_training.py
+2026-03-31 16:49:04,450 - pipeline - INFO - ======================================================================
+2026-03-31 16:49:04,450 - pipeline - INFO - 🚀 RECOMART MASTER PIPELINE STARTED
+2026-03-31 16:49:04,450 - pipeline - INFO - ======================================================================
+2026-03-31 16:49:04,450 - pipeline - INFO - 
+📥 STEP 1: Data Ingestion (Shankar)
+2026-03-31 16:49:04,450 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 16:49:06,456 - pipeline - ERROR - ❌ Ingestion failed: 523 Server Error: <none> for url: https://fakestoreapi.com/products
+2026-03-31 16:49:06,456 - pipeline - WARNING - Pipeline paused. Waiting for Shankar to resolve data ingestion.
+2026-03-31 16:55:48,177 - pipeline - INFO - ======================================================================
+2026-03-31 16:55:48,178 - pipeline - INFO - 🚀 RECOMART MASTER PIPELINE STARTED
+2026-03-31 16:55:48,178 - pipeline - INFO - ======================================================================
+2026-03-31 16:55:48,178 - pipeline - INFO - 
+📥 STEP 1: Data Ingestion (Shankar)
+2026-03-31 16:55:48,178 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 16:55:48,244 - pipeline - INFO - ✅ Ingestion completed successfully
+2026-03-31 16:55:48,244 - pipeline - INFO - 
+🧼 STEP 2: Data Processing & Validation (Prashansa)
+2026-03-31 16:55:48,245 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 16:55:49,151 - pipeline - INFO - ✅ Data processing completed successfully
+2026-03-31 16:55:49,151 - pipeline - INFO - 
+🏗️  STEP 3: Feature Engineering (Aniket)
+2026-03-31 16:55:49,151 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 16:55:49,151 - pipeline - INFO - ⏳ Waiting for feature engineering module... (scripts/feature_engineering.py)
+2026-03-31 16:55:49,151 - pipeline - INFO - 
+🤖 STEP 4: Model Training & Evaluation (Flavia)
+2026-03-31 16:55:49,151 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 16:55:49,151 - pipeline - INFO - ⏳ Waiting for model training module... (scripts/model_training.py)
+2026-03-31 16:55:49,151 - pipeline - INFO - 
+======================================================================
+2026-03-31 16:55:49,151 - pipeline - INFO - ✅ PIPELINE FRAMEWORK READY
+2026-03-31 16:55:49,151 - pipeline - INFO - ======================================================================
+2026-03-31 16:55:49,151 - pipeline - INFO - 
+Team members: Implement your modules in the scripts/ folder:
+2026-03-31 16:55:49,151 - pipeline - INFO -   - Prashansa: scripts/data_processing.py
+2026-03-31 16:55:49,151 - pipeline - INFO -   - Aniket: scripts/feature_engineering.py
+2026-03-31 16:55:49,151 - pipeline - INFO -   - Flavia: scripts/model_training.py
+2026-03-31 17:04:38,184 - pipeline - INFO - ======================================================================
+2026-03-31 17:04:38,185 - pipeline - INFO - 🚀 RECOMART MASTER PIPELINE STARTED
+2026-03-31 17:04:38,185 - pipeline - INFO - ======================================================================
+2026-03-31 17:04:38,185 - pipeline - INFO - 
+📥 STEP 1: Data Ingestion (Shankar)
+2026-03-31 17:04:38,185 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:04:38,242 - pipeline - INFO - ✅ Ingestion completed successfully
+2026-03-31 17:04:38,243 - pipeline - INFO - 
+🧼 STEP 2: Data Processing & Validation (Prashansa)
+2026-03-31 17:04:38,243 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:04:38,526 - pipeline - ERROR - ❌ Data processing failed: No module named 'utils.logger'; 'utils' is not a package
+2026-03-31 17:05:13,323 - pipeline - INFO - ======================================================================
+2026-03-31 17:05:13,323 - pipeline - INFO - 🚀 RECOMART MASTER PIPELINE STARTED
+2026-03-31 17:05:13,323 - pipeline - INFO - ======================================================================
+2026-03-31 17:05:13,323 - pipeline - INFO - 
+📥 STEP 1: Data Ingestion (Shankar)
+2026-03-31 17:05:13,323 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:05:13,382 - pipeline - INFO - ✅ Ingestion completed successfully
+2026-03-31 17:05:13,382 - pipeline - INFO - 
+🧼 STEP 2: Data Processing & Validation (Prashansa)
+2026-03-31 17:05:13,382 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:05:13,646 - pipeline - ERROR - ❌ Data processing failed: No module named 'utils.logger'; 'utils' is not a package
+2026-03-31 17:18:29,590 - pipeline - INFO - ======================================================================
+2026-03-31 17:18:29,591 - pipeline - INFO - 🚀 RECOMART MASTER PIPELINE STARTED
+2026-03-31 17:18:29,591 - pipeline - INFO - ======================================================================
+2026-03-31 17:18:29,591 - pipeline - INFO - 
+📥 STEP 1: Data Ingestion (Shankar)
+2026-03-31 17:18:29,591 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:18:29,668 - pipeline - INFO - ✅ Ingestion completed successfully
+2026-03-31 17:18:29,668 - pipeline - INFO - 
+🧼 STEP 2: Data Processing & Validation (Prashansa)
+2026-03-31 17:18:29,668 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:18:30,790 - pipeline - INFO - ✅ Data processing completed successfully
+2026-03-31 17:18:30,790 - pipeline - INFO - 
+🏗️  STEP 3: Feature Engineering (Aniket)
+2026-03-31 17:18:30,790 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:18:30,790 - pipeline - INFO - ⏳ Waiting for feature engineering module... (scripts/feature_engineering.py)
+2026-03-31 17:18:30,790 - pipeline - INFO - 
+🤖 STEP 4: Model Training & Evaluation (Flavia)
+2026-03-31 17:18:30,790 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:18:30,790 - pipeline - INFO - ⏳ Waiting for model training module... (scripts/model_training.py)
+2026-03-31 17:18:30,791 - pipeline - INFO - 
+======================================================================
+2026-03-31 17:18:30,791 - pipeline - INFO - ✅ PIPELINE FRAMEWORK READY
+2026-03-31 17:18:30,791 - pipeline - INFO - ======================================================================
+2026-03-31 17:18:30,791 - pipeline - INFO - 
+Team members: Implement your modules in the scripts/ folder:
+2026-03-31 17:18:30,791 - pipeline - INFO -   - Prashansa: scripts/data_processing.py
+2026-03-31 17:18:30,791 - pipeline - INFO -   - Aniket: scripts/feature_engineering.py
+2026-03-31 17:18:30,791 - pipeline - INFO -   - Flavia: scripts/model_training.py
+2026-03-31 17:20:05,797 - pipeline - INFO - ======================================================================
+2026-03-31 17:20:05,797 - pipeline - INFO - 🚀 RECOMART MASTER PIPELINE STARTED
+2026-03-31 17:20:05,797 - pipeline - INFO - ======================================================================
+2026-03-31 17:20:05,797 - pipeline - INFO - 
+📥 STEP 1: Data Ingestion (Shankar)
+2026-03-31 17:20:05,797 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:20:05,854 - pipeline - INFO - ✅ Ingestion completed successfully
+2026-03-31 17:20:05,854 - pipeline - INFO - 
+🧼 STEP 2: Data Processing & Validation (Prashansa)
+2026-03-31 17:20:05,854 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:20:06,532 - pipeline - INFO - ✅ Data processing completed successfully
+2026-03-31 17:20:06,532 - pipeline - INFO - 
+🏗️  STEP 3: Feature Engineering (Aniket)
+2026-03-31 17:20:06,532 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:20:06,532 - pipeline - INFO - ⏳ Waiting for feature engineering module... (scripts/feature_engineering.py)
+2026-03-31 17:20:06,532 - pipeline - INFO - 
+🤖 STEP 4: Model Training & Evaluation (Flavia)
+2026-03-31 17:20:06,532 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:20:06,532 - pipeline - INFO - ⏳ Waiting for model training module... (scripts/model_training.py)
+2026-03-31 17:20:06,532 - pipeline - INFO - 
+======================================================================
+2026-03-31 17:20:06,532 - pipeline - INFO - ✅ PIPELINE FRAMEWORK READY
+2026-03-31 17:20:06,532 - pipeline - INFO - ======================================================================
+2026-03-31 17:20:06,532 - pipeline - INFO - 
+Team members: Implement your modules in the scripts/ folder:
+2026-03-31 17:20:06,532 - pipeline - INFO -   - Prashansa: scripts/data_processing.py
+2026-03-31 17:20:06,532 - pipeline - INFO -   - Aniket: scripts/feature_engineering.py
+2026-03-31 17:20:06,532 - pipeline - INFO -   - Flavia: scripts/model_training.py
+2026-03-31 17:41:51,646 - pipeline - INFO - ======================================================================
+2026-03-31 17:41:51,646 - pipeline - INFO -  RECOMART MASTER PIPELINE STARTED
+2026-03-31 17:41:51,646 - pipeline - INFO - ======================================================================
+2026-03-31 17:41:51,646 - pipeline - INFO - 
+ STEP 1: Data Ingestion (Shankar)
+2026-03-31 17:41:51,646 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:41:51,707 - pipeline - INFO - Ingestion completed successfully
+2026-03-31 17:41:51,707 - pipeline - INFO - 
+ STEP 2: Data Processing & Validation (Prashansa)
+2026-03-31 17:41:51,707 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:41:52,559 - pipeline - INFO -  Data processing completed successfully
+2026-03-31 17:41:52,559 - pipeline - INFO - 
+  STEP 3: Feature Engineering (Aniket)
+2026-03-31 17:41:52,559 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:41:52,559 - pipeline - INFO -  Waiting for feature engineering module... (scripts/feature_engineering.py)
+2026-03-31 17:41:52,559 - pipeline - INFO - 
+ STEP 4: Model Training & Evaluation (Flavia)
+2026-03-31 17:41:52,559 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:41:52,559 - pipeline - INFO -  Waiting for model training module... (scripts/model_training.py)
+2026-03-31 17:41:52,559 - pipeline - INFO - 
+======================================================================
+2026-03-31 17:41:52,559 - pipeline - INFO -  PIPELINE FRAMEWORK READY
+2026-03-31 17:41:52,559 - pipeline - INFO - ======================================================================
+2026-03-31 17:41:52,559 - pipeline - INFO - 
+Team members: Implement your modules in the scripts/ folder:
+2026-03-31 17:41:52,559 - pipeline - INFO -   - Prashansa: scripts/data_processing.py
+2026-03-31 17:41:52,559 - pipeline - INFO -   - Aniket: scripts/feature_engineering.py
+2026-03-31 17:41:52,560 - pipeline - INFO -   - Flavia: scripts/model_training.py
+2026-03-31 17:42:20,242 - pipeline - INFO - ======================================================================
+2026-03-31 17:42:20,242 - pipeline - INFO -  RECOMART MASTER PIPELINE STARTED
+2026-03-31 17:42:20,242 - pipeline - INFO - ======================================================================
+2026-03-31 17:42:20,242 - pipeline - INFO - 
+ STEP 1: Data Ingestion (Shankar)
+2026-03-31 17:42:20,242 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:42:20,301 - pipeline - INFO - Ingestion completed successfully
+2026-03-31 17:42:20,301 - pipeline - INFO - 
+ STEP 2: Data Processing & Validation (Prashansa)
+2026-03-31 17:42:20,301 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:42:20,966 - pipeline - INFO -  Data processing completed successfully
+2026-03-31 17:42:20,966 - pipeline - INFO - 
+  STEP 3: Feature Engineering (Aniket)
+2026-03-31 17:42:20,966 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:42:20,966 - pipeline - INFO -  Waiting for feature engineering module... (scripts/feature_engineering.py)
+2026-03-31 17:42:20,966 - pipeline - INFO - 
+ STEP 4: Model Training & Evaluation (Flavia)
+2026-03-31 17:42:20,966 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:42:20,966 - pipeline - INFO -  Waiting for model training module... (scripts/model_training.py)
+2026-03-31 17:42:20,966 - pipeline - INFO - 
+======================================================================
+2026-03-31 17:42:20,966 - pipeline - INFO -  PIPELINE FRAMEWORK READY
+2026-03-31 17:42:20,966 - pipeline - INFO - ======================================================================
+2026-03-31 17:42:20,966 - pipeline - INFO - 
+Team members: Implement your modules in the scripts/ folder:
+2026-03-31 17:42:20,966 - pipeline - INFO -   - Prashansa: scripts/data_processing.py
+2026-03-31 17:42:20,966 - pipeline - INFO -   - Aniket: scripts/feature_engineering.py
+2026-03-31 17:42:20,966 - pipeline - INFO -   - Flavia: scripts/model_training.py
+2026-03-31 17:42:47,044 - pipeline - INFO - ======================================================================
+2026-03-31 17:42:47,044 - pipeline - INFO -  RECOMART MASTER PIPELINE STARTED
+2026-03-31 17:42:47,044 - pipeline - INFO - ======================================================================
+2026-03-31 17:42:47,044 - pipeline - INFO - 
+ STEP 1: Data Ingestion (Shankar)
+2026-03-31 17:42:47,044 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:42:47,108 - pipeline - INFO - Ingestion completed successfully
+2026-03-31 17:42:47,108 - pipeline - INFO - 
+ STEP 2: Data Processing & Validation (Prashansa)
+2026-03-31 17:42:47,108 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:42:47,778 - pipeline - INFO -  Data processing completed successfully
+2026-03-31 17:42:47,778 - pipeline - INFO - 
+  STEP 3: Feature Engineering (Aniket)
+2026-03-31 17:42:47,778 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:42:47,778 - pipeline - INFO -  Waiting for feature engineering module... (scripts/feature_engineering.py)
+2026-03-31 17:42:47,778 - pipeline - INFO - 
+ STEP 4: Model Training & Evaluation (Flavia)
+2026-03-31 17:42:47,778 - pipeline - INFO - ----------------------------------------------------------------------
+2026-03-31 17:42:47,778 - pipeline - INFO -  Waiting for model training module... (scripts/model_training.py)
+2026-03-31 17:42:47,778 - pipeline - INFO - 
+======================================================================
+2026-03-31 17:42:47,778 - pipeline - INFO -  PIPELINE FRAMEWORK READY
+2026-03-31 17:42:47,778 - pipeline - INFO - ======================================================================
+2026-03-31 17:42:47,778 - pipeline - INFO - 
+Team members: Implement your modules in the scripts/ folder:
+2026-03-31 17:42:47,778 - pipeline - INFO -   - Prashansa: done
+2026-03-31 17:42:47,778 - pipeline - INFO -   - Aniket: scripts/feature_engineering.py
+2026-03-31 17:42:47,778 - pipeline - INFO -   - Flavia: scripts/model_training.py

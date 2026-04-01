@@ -1,0 +1,110 @@
+2026-03-31 17:18:30,163 - processing - INFO - 🧼 Starting Data Processing & Validation...
+2026-03-31 17:18:30,176 - processing - INFO - CSV Loaded: (30000, 6)
+2026-03-31 17:18:30,176 - processing - INFO - API Loaded: (20, 4)
+2026-03-31 17:18:30,176 - processing - INFO - 🔍 Performing Data Validation
+2026-03-31 17:18:30,179 - processing - INFO - Missing Values:
+event_time    0
+event_type    0
+product_id    0
+user_id       0
+price         0
+category      0
+dtype: int64
+2026-03-31 17:18:30,189 - processing - INFO - Duplicate Rows: 0
+2026-03-31 17:18:30,189 - processing - INFO - 🧼 Cleaning Data
+2026-03-31 17:18:30,214 - processing - INFO - After cleaning: (29998, 4)
+2026-03-31 17:18:30,220 - processing - INFO - After merge: (29998, 7)
+2026-03-31 17:18:30,220 - processing - INFO - 📊 Generating EDA plots
+2026-03-31 17:18:30,670 - processing - INFO - EDA plots saved successfully
+2026-03-31 17:18:30,742 - processing - INFO - Processed data saved to data/processed/cleaned_data.csv
+2026-03-31 17:18:30,742 - processing - INFO - 📄 Generating Data Quality Report
+2026-03-31 17:18:30,790 - processing - INFO - 📄 Data quality report generated successfully
+2026-03-31 17:18:30,790 - processing - INFO - ✅ Data Processing Completed Successfully
+2026-03-31 17:20:06,128 - processing - INFO - 🧼 Starting Data Processing & Validation...
+2026-03-31 17:20:06,146 - processing - INFO - CSV Loaded: (30000, 6)
+2026-03-31 17:20:06,146 - processing - INFO - API Loaded: (20, 4)
+2026-03-31 17:20:06,146 - processing - INFO - 🔍 Performing Data Validation
+2026-03-31 17:20:06,149 - processing - INFO - Missing Values:
+event_time    0
+event_type    0
+product_id    0
+user_id       0
+price         0
+category      0
+dtype: int64
+2026-03-31 17:20:06,157 - processing - INFO - Duplicate Rows: 0
+2026-03-31 17:20:06,157 - processing - INFO - 🧼 Cleaning Data
+2026-03-31 17:20:06,167 - processing - INFO - After cleaning: (29998, 4)
+2026-03-31 17:20:06,171 - processing - INFO - After merge: (29998, 7)
+2026-03-31 17:20:06,171 - processing - INFO - 📊 Generating EDA plots
+2026-03-31 17:20:06,418 - processing - INFO - EDA plots saved successfully
+2026-03-31 17:20:06,488 - processing - INFO - Processed data saved to data/processed/cleaned_data.csv
+2026-03-31 17:20:06,488 - processing - INFO - 📄 Generating Data Quality Report
+2026-03-31 17:20:06,531 - processing - INFO - 📄 Data quality report generated successfully
+2026-03-31 17:20:06,531 - processing - INFO - ✅ Data Processing Completed Successfully
+2026-03-31 17:41:51,991 - processing - INFO -  Starting Data Processing & Validation...
+2026-03-31 17:41:52,006 - processing - INFO - CSV Loaded: (30000, 6)
+2026-03-31 17:41:52,006 - processing - INFO - API Loaded: (20, 4)
+2026-03-31 17:41:52,006 - processing - INFO - 🔍 Performing Data Validation
+2026-03-31 17:41:52,010 - processing - INFO - Missing Values:
+event_time    0
+event_type    0
+product_id    0
+user_id       0
+price         0
+category      0
+dtype: int64
+2026-03-31 17:41:52,019 - processing - INFO - Duplicate Rows: 0
+2026-03-31 17:41:52,019 - processing - INFO - 🧼 Cleaning Data
+2026-03-31 17:41:52,031 - processing - INFO - After cleaning: (29998, 4)
+2026-03-31 17:41:52,034 - processing - INFO - After merge: (29998, 7)
+2026-03-31 17:41:52,034 - processing - INFO - 📊 Generating EDA plots
+2026-03-31 17:41:52,446 - processing - INFO - EDA plots saved successfully
+2026-03-31 17:41:52,515 - processing - INFO - Processed data saved to data/processed/cleaned_data.csv
+2026-03-31 17:41:52,515 - processing - INFO -  Generating Data Quality Report
+2026-03-31 17:41:52,559 - processing - INFO -  Data quality report generated successfully
+2026-03-31 17:41:52,559 - processing - INFO -  Data Processing Completed Successfully
+2026-03-31 17:42:20,552 - processing - INFO -  Starting Data Processing & Validation...
+2026-03-31 17:42:20,571 - processing - INFO - CSV Loaded: (30000, 6)
+2026-03-31 17:42:20,572 - processing - INFO - API Loaded: (20, 4)
+2026-03-31 17:42:20,572 - processing - INFO - 🔍 Performing Data Validation
+2026-03-31 17:42:20,574 - processing - INFO - Missing Values:
+event_time    0
+event_type    0
+product_id    0
+user_id       0
+price         0
+category      0
+dtype: int64
+2026-03-31 17:42:20,581 - processing - INFO - Duplicate Rows: 0
+2026-03-31 17:42:20,582 - processing - INFO -  Cleaning Data
+2026-03-31 17:42:20,592 - processing - INFO - After cleaning: (29998, 4)
+2026-03-31 17:42:20,597 - processing - INFO - After merge: (29998, 7)
+2026-03-31 17:42:20,597 - processing - INFO - Generating EDA plots
+2026-03-31 17:42:20,851 - processing - INFO - EDA plots saved successfully
+2026-03-31 17:42:20,919 - processing - INFO - Processed data saved to data/processed/cleaned_data.csv
+2026-03-31 17:42:20,919 - processing - INFO -  Generating Data Quality Report
+2026-03-31 17:42:20,965 - processing - INFO -  Data quality report generated successfully
+2026-03-31 17:42:20,965 - processing - INFO -  Data Processing Completed Successfully
+2026-03-31 17:42:47,379 - processing - INFO -  Starting Data Processing & Validation...
+2026-03-31 17:42:47,391 - processing - INFO - CSV Loaded: (30000, 6)
+2026-03-31 17:42:47,391 - processing - INFO - API Loaded: (20, 4)
+2026-03-31 17:42:47,391 - processing - INFO - 🔍 Performing Data Validation
+2026-03-31 17:42:47,394 - processing - INFO - Missing Values:
+event_time    0
+event_type    0
+product_id    0
+user_id       0
+price         0
+category      0
+dtype: int64
+2026-03-31 17:42:47,401 - processing - INFO - Duplicate Rows: 0
+2026-03-31 17:42:47,401 - processing - INFO -  Cleaning Data
+2026-03-31 17:42:47,411 - processing - INFO - After cleaning: (29998, 4)
+2026-03-31 17:42:47,414 - processing - INFO - After merge: (29998, 7)
+2026-03-31 17:42:47,414 - processing - INFO - Generating EDA plots
+2026-03-31 17:42:47,665 - processing - INFO - EDA plots saved successfully
+2026-03-31 17:42:47,734 - processing - INFO - Processed data saved to data/processed/cleaned_data.csv
+2026-03-31 17:42:47,734 - processing - INFO -  Generating Data Quality Report
+2026-03-31 17:42:47,778 - processing - INFO -  Data quality report generated successfully
+2026-03-31 17:42:47,778 - processing - INFO -  Data Processing Completed Successfully

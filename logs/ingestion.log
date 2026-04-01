@@ -1,0 +1,270 @@
+2026-03-28 13:38:00,593 - INFO - ============================================================
+2026-03-28 13:38:00,593 - INFO - Starting RecoMart Data Ingestion Pipeline
+2026-03-28 13:38:00,594 - INFO - ============================================================
+2026-03-28 13:38:00,595 - INFO - Loading CSV from 2019-Oct.csv...
+2026-03-28 13:38:00,641 - INFO - CSV loaded successfully: 30000 rows
+2026-03-28 13:38:00,718 - INFO - Sample data saved to data\raw\sample_data.csv
+2026-03-28 13:38:00,718 - INFO - Fetching API data from https://fakestoreapi.com/products...
+2026-03-28 13:38:01,664 - INFO - API data fetched successfully: 20 products
+2026-03-28 13:38:01,713 - INFO - API data saved to data\raw\api_products.csv
+2026-03-28 13:38:01,713 - INFO - ============================================================
+2026-03-28 13:38:01,713 - INFO - OK Data Ingestion Pipeline completed successfully!
+2026-03-28 13:38:01,713 - INFO - OK Sample data: data\raw\sample_data.csv
+2026-03-28 13:38:01,713 - INFO - OK API products: data\raw\api_products.csv
+2026-03-28 13:38:01,713 - INFO - ============================================================
+2026-03-31 08:23:08,775 - INFO - ======================================================================
+2026-03-31 08:23:08,775 - INFO - 🚀 RECOMART MASTER PIPELINE STARTED
+2026-03-31 08:23:08,775 - INFO - ======================================================================
+2026-03-31 08:23:08,775 - INFO - 
+📥 STEP 1: Data Ingestion (Shankar)
+2026-03-31 08:23:08,775 - INFO - ----------------------------------------------------------------------
+2026-03-31 08:23:08,775 - INFO - ============================================================
+2026-03-31 08:23:08,775 - INFO - Starting RecoMart Data Ingestion Pipeline
+2026-03-31 08:23:08,776 - INFO - ============================================================
+2026-03-31 08:23:08,776 - INFO - Loading CSV from 2019-Oct.csv...
+2026-03-31 08:23:08,793 - INFO - CSV loaded successfully: 30000 rows
+2026-03-31 08:23:08,836 - INFO - Data saved successfully to data/raw/sample_data.csv
+2026-03-31 08:23:08,836 - INFO - Fetching API data from https://fakestoreapi.com/products...
+2026-03-31 08:23:11,106 - INFO - API data fetched successfully: 20 products
+2026-03-31 08:23:11,114 - INFO - API data converted to DataFrame: 20 rows
+2026-03-31 08:23:11,115 - INFO - Data saved successfully to data/raw/api_products.csv
+2026-03-31 08:23:11,115 - INFO - ============================================================
+2026-03-31 08:23:11,116 - INFO - ✅ Data Ingestion Pipeline completed successfully!
+2026-03-31 08:23:11,116 - INFO - ✅ Sample data: data/raw/sample_data.csv
+2026-03-31 08:23:11,116 - INFO - ✅ API products: data/raw/api_products.csv
+2026-03-31 08:23:11,116 - INFO - ============================================================
+2026-03-31 08:23:11,116 - INFO - ✅ Ingestion completed successfully
+2026-03-31 08:23:11,116 - INFO - 
+🧼 STEP 2: Data Processing & Validation (Prashansa)
+2026-03-31 08:23:11,116 - INFO - ----------------------------------------------------------------------
+2026-03-31 08:23:11,117 - INFO - ⏳ Waiting for processing module... (scripts/data_processing.py)
+2026-03-31 08:23:11,117 - INFO - 
+🏗️  STEP 3: Feature Engineering (Aniket)
+2026-03-31 08:23:11,117 - INFO - ----------------------------------------------------------------------
+2026-03-31 08:23:11,118 - INFO - ⏳ Waiting for feature engineering module... (scripts/feature_engineering.py)
+2026-03-31 08:23:11,118 - INFO - 
+🤖 STEP 4: Model Training & Evaluation (Flavia)
+2026-03-31 08:23:11,118 - INFO - ----------------------------------------------------------------------
+2026-03-31 08:23:11,118 - INFO - ⏳ Waiting for model training module... (scripts/model_training.py)
+2026-03-31 08:23:11,118 - INFO - 
+======================================================================
+2026-03-31 08:23:11,118 - INFO - ✅ PIPELINE FRAMEWORK READY
+2026-03-31 08:23:11,118 - INFO - ======================================================================
+2026-03-31 08:23:11,118 - INFO - 
+Team members: Implement your modules in the scripts/ folder:
+2026-03-31 08:23:11,118 - INFO -   - Prashansa: scripts/data_processing.py
+2026-03-31 08:23:11,118 - INFO -   - Aniket: scripts/feature_engineering.py
+2026-03-31 08:23:11,118 - INFO -   - Flavia: scripts/model_training.py
+2026-03-31 16:49:04,450 - INFO - ======================================================================
+2026-03-31 16:49:04,450 - INFO - 🚀 RECOMART MASTER PIPELINE STARTED
+2026-03-31 16:49:04,450 - INFO - ======================================================================
+2026-03-31 16:49:04,450 - INFO - 
+📥 STEP 1: Data Ingestion (Shankar)
+2026-03-31 16:49:04,450 - INFO - ----------------------------------------------------------------------
+2026-03-31 16:49:04,450 - INFO - ============================================================
+2026-03-31 16:49:04,450 - INFO - Starting RecoMart Data Ingestion Pipeline
+2026-03-31 16:49:04,450 - INFO - ============================================================
+2026-03-31 16:49:04,450 - INFO - Loading CSV from 2019-Oct.csv...
+2026-03-31 16:49:04,470 - INFO - CSV loaded successfully: 30000 rows
+2026-03-31 16:49:04,510 - INFO - Data saved successfully to data/raw/sample_data.csv
+2026-03-31 16:49:04,510 - INFO - Fetching API data from https://fakestoreapi.com/products...
+2026-03-31 16:49:06,455 - ERROR - Error fetching API: 523 Server Error: <none> for url: https://fakestoreapi.com/products
+2026-03-31 16:49:06,456 - ERROR - ❌ Pipeline failed: 523 Server Error: <none> for url: https://fakestoreapi.com/products
+2026-03-31 16:49:06,456 - ERROR - ❌ Ingestion failed: 523 Server Error: <none> for url: https://fakestoreapi.com/products
+2026-03-31 16:49:06,456 - WARNING - Pipeline paused. Waiting for Shankar to resolve data ingestion.
+2026-03-31 16:55:48,177 - INFO - ======================================================================
+2026-03-31 16:55:48,178 - INFO - 🚀 RECOMART MASTER PIPELINE STARTED
+2026-03-31 16:55:48,178 - INFO - ======================================================================
+2026-03-31 16:55:48,178 - INFO - 
+📥 STEP 1: Data Ingestion (Shankar)
+2026-03-31 16:55:48,178 - INFO - ----------------------------------------------------------------------
+2026-03-31 16:55:48,178 - INFO - ============================================================
+2026-03-31 16:55:48,178 - INFO - Starting RecoMart Data Ingestion Pipeline
+2026-03-31 16:55:48,178 - INFO - ============================================================
+2026-03-31 16:55:48,178 - INFO - Loading CSV from 2019-Oct.csv...
+2026-03-31 16:55:48,196 - INFO - CSV loaded successfully: 30000 rows
+2026-03-31 16:55:48,243 - INFO - Data saved successfully to data/raw/sample_data.csv
+2026-03-31 16:55:48,243 - INFO - ✅ Using cached API data
+2026-03-31 16:55:48,244 - INFO - ============================================================
+2026-03-31 16:55:48,244 - INFO - ✅ Data Ingestion Pipeline completed successfully!
+2026-03-31 16:55:48,244 - INFO - ✅ Sample data: data/raw/sample_data.csv
+2026-03-31 16:55:48,244 - INFO - ✅ API products: data/raw/api_products.csv
+2026-03-31 16:55:48,244 - INFO - ============================================================
+2026-03-31 16:55:48,244 - INFO - ✅ Ingestion completed successfully
+2026-03-31 16:55:48,244 - INFO - 
+🧼 STEP 2: Data Processing & Validation (Prashansa)
+2026-03-31 16:55:48,245 - INFO - ----------------------------------------------------------------------
+2026-03-31 16:55:49,151 - INFO - ✅ Data processing completed successfully
+2026-03-31 16:55:49,151 - INFO - 
+🏗️  STEP 3: Feature Engineering (Aniket)
+2026-03-31 16:55:49,151 - INFO - ----------------------------------------------------------------------
+2026-03-31 16:55:49,151 - INFO - ⏳ Waiting for feature engineering module... (scripts/feature_engineering.py)
+2026-03-31 16:55:49,151 - INFO - 
+🤖 STEP 4: Model Training & Evaluation (Flavia)
+2026-03-31 16:55:49,151 - INFO - ----------------------------------------------------------------------
+2026-03-31 16:55:49,151 - INFO - ⏳ Waiting for model training module... (scripts/model_training.py)
+2026-03-31 16:55:49,151 - INFO - 
+======================================================================
+2026-03-31 16:55:49,151 - INFO - ✅ PIPELINE FRAMEWORK READY
+2026-03-31 16:55:49,151 - INFO - ======================================================================
+2026-03-31 16:55:49,151 - INFO - 
+Team members: Implement your modules in the scripts/ folder:
+2026-03-31 16:55:49,151 - INFO -   - Prashansa: scripts/data_processing.py
+2026-03-31 16:55:49,151 - INFO -   - Aniket: scripts/feature_engineering.py
+2026-03-31 16:55:49,151 - INFO -   - Flavia: scripts/model_training.py
+2026-03-31 17:04:38,184 - INFO - ======================================================================
+2026-03-31 17:04:38,185 - INFO - 🚀 RECOMART MASTER PIPELINE STARTED
+2026-03-31 17:04:38,185 - INFO - ======================================================================
+2026-03-31 17:04:38,185 - INFO - 
+📥 STEP 1: Data Ingestion (Shankar)
+2026-03-31 17:04:38,185 - INFO - ----------------------------------------------------------------------
+2026-03-31 17:04:38,185 - INFO - ============================================================
+2026-03-31 17:04:38,185 - INFO - Starting RecoMart Data Ingestion Pipeline
+2026-03-31 17:04:38,185 - INFO - ============================================================
+2026-03-31 17:04:38,185 - INFO - Loading CSV from 2019-Oct.csv...
+2026-03-31 17:04:38,202 - INFO - CSV loaded successfully: 30000 rows
+2026-03-31 17:04:38,241 - INFO - Data saved successfully to data/raw/sample_data.csv
+2026-03-31 17:04:38,241 - INFO - ✅ Using cached API data
+2026-03-31 17:04:38,242 - INFO - ============================================================
+2026-03-31 17:04:38,242 - INFO - ✅ Data Ingestion Pipeline completed successfully!
+2026-03-31 17:04:38,242 - INFO - ✅ Sample data: data/raw/sample_data.csv
+2026-03-31 17:04:38,242 - INFO - ✅ API products: data/raw/api_products.csv
+2026-03-31 17:04:38,242 - INFO - ============================================================
+2026-03-31 17:04:38,242 - INFO - ✅ Ingestion completed successfully
+2026-03-31 17:04:38,243 - INFO - 
+🧼 STEP 2: Data Processing & Validation (Prashansa)
+2026-03-31 17:04:38,243 - INFO - ----------------------------------------------------------------------
+2026-03-31 17:04:38,526 - ERROR - ❌ Data processing failed: No module named 'utils.logger'; 'utils' is not a package
+2026-03-31 17:05:13,323 - INFO - ======================================================================
+2026-03-31 17:05:13,323 - INFO - 🚀 RECOMART MASTER PIPELINE STARTED
+2026-03-31 17:05:13,323 - INFO - ======================================================================
+2026-03-31 17:05:13,323 - INFO - 
+📥 STEP 1: Data Ingestion (Shankar)
+2026-03-31 17:05:13,323 - INFO - ----------------------------------------------------------------------
+2026-03-31 17:05:13,323 - INFO - ============================================================
+2026-03-31 17:05:13,323 - INFO - Starting RecoMart Data Ingestion Pipeline
+2026-03-31 17:05:13,323 - INFO - ============================================================
+2026-03-31 17:05:13,323 - INFO - Loading CSV from 2019-Oct.csv...
+2026-03-31 17:05:13,341 - INFO - CSV loaded successfully: 30000 rows
+2026-03-31 17:05:13,380 - INFO - Data saved successfully to data/raw/sample_data.csv
+2026-03-31 17:05:13,380 - INFO - ✅ Using cached API data
+2026-03-31 17:05:13,381 - INFO - ============================================================
+2026-03-31 17:05:13,382 - INFO - ✅ Data Ingestion Pipeline completed successfully!
+2026-03-31 17:05:13,382 - INFO - ✅ Sample data: data/raw/sample_data.csv
+2026-03-31 17:05:13,382 - INFO - ✅ API products: data/raw/api_products.csv
+2026-03-31 17:05:13,382 - INFO - ============================================================
+2026-03-31 17:05:13,382 - INFO - ✅ Ingestion completed successfully
+2026-03-31 17:05:13,382 - INFO - 
+🧼 STEP 2: Data Processing & Validation (Prashansa)
+2026-03-31 17:05:13,382 - INFO - ----------------------------------------------------------------------
+2026-03-31 17:05:13,646 - ERROR - ❌ Data processing failed: No module named 'utils.logger'; 'utils' is not a package
+2026-03-31 17:18:29,590 - INFO - ======================================================================
+2026-03-31 17:18:29,591 - INFO - 🚀 RECOMART MASTER PIPELINE STARTED
+2026-03-31 17:18:29,591 - INFO - ======================================================================
+2026-03-31 17:18:29,591 - INFO - 
+📥 STEP 1: Data Ingestion (Shankar)
+2026-03-31 17:18:29,591 - INFO - ----------------------------------------------------------------------
+2026-03-31 17:18:29,591 - INFO - ============================================================
+2026-03-31 17:18:29,591 - INFO - Starting RecoMart Data Ingestion Pipeline
+2026-03-31 17:18:29,591 - INFO - ============================================================
+2026-03-31 17:18:29,591 - INFO - Loading CSV from 2019-Oct.csv...
+2026-03-31 17:18:29,623 - INFO - CSV loaded successfully: 30000 rows
+2026-03-31 17:18:29,667 - INFO - Data saved successfully to data/raw/sample_data.csv
+2026-03-31 17:18:29,667 - INFO - ✅ Using cached API data
+2026-03-31 17:18:29,668 - INFO - ============================================================
+2026-03-31 17:18:29,668 - INFO - ✅ Data Ingestion Pipeline completed successfully!
+2026-03-31 17:18:29,668 - INFO - ✅ Sample data: data/raw/sample_data.csv
+2026-03-31 17:18:29,668 - INFO - ✅ API products: data/raw/api_products.csv
+2026-03-31 17:18:29,668 - INFO - ============================================================
+2026-03-31 17:18:29,668 - INFO - ✅ Ingestion completed successfully
+2026-03-31 17:18:29,668 - INFO - 
+🧼 STEP 2: Data Processing & Validation (Prashansa)
+2026-03-31 17:18:29,668 - INFO - ----------------------------------------------------------------------
+2026-03-31 17:18:30,163 - INFO - 🧼 Starting Data Processing & Validation...
+2026-03-31 17:18:30,176 - INFO - CSV Loaded: (30000, 6)
+2026-03-31 17:18:30,176 - INFO - API Loaded: (20, 4)
+2026-03-31 17:18:30,176 - INFO - 🔍 Performing Data Validation
+2026-03-31 17:18:30,179 - INFO - Missing Values:
+event_time    0
+event_type    0
+product_id    0
+user_id       0
+price         0
+category      0
+dtype: int64
+2026-03-31 17:18:30,189 - INFO - Duplicate Rows: 0
+2026-03-31 17:18:30,189 - INFO - 🧼 Cleaning Data
+2026-03-31 17:18:30,214 - INFO - After cleaning: (29998, 4)
+2026-03-31 17:18:30,220 - INFO - After merge: (29998, 7)
+2026-03-31 17:18:30,220 - INFO - 📊 Generating EDA plots
+2026-03-31 17:18:30,670 - INFO - EDA plots saved successfully
+2026-03-31 17:18:30,742 - INFO - Processed data saved to data/processed/cleaned_data.csv
+2026-03-31 17:18:30,742 - INFO - 📄 Generating Data Quality Report
+2026-03-31 17:18:30,790 - INFO - 📄 Data quality report generated successfully
+2026-03-31 17:18:30,790 - INFO - ✅ Data Processing Completed Successfully
+2026-03-31 17:18:30,790 - INFO - ✅ Data processing completed successfully
+2026-03-31 17:18:30,790 - INFO - 
+🏗️  STEP 3: Feature Engineering (Aniket)
+2026-03-31 17:18:30,790 - INFO - ----------------------------------------------------------------------
+2026-03-31 17:18:30,790 - INFO - ⏳ Waiting for feature engineering module... (scripts/feature_engineering.py)
+2026-03-31 17:18:30,790 - INFO - 
+🤖 STEP 4: Model Training & Evaluation (Flavia)
+2026-03-31 17:18:30,790 - INFO - ----------------------------------------------------------------------
+2026-03-31 17:18:30,790 - INFO - ⏳ Waiting for model training module... (scripts/model_training.py)
+2026-03-31 17:18:30,791 - INFO - 
+======================================================================
+2026-03-31 17:18:30,791 - INFO - ✅ PIPELINE FRAMEWORK READY
+2026-03-31 17:18:30,791 - INFO - ======================================================================
+2026-03-31 17:18:30,791 - INFO - 
+Team members: Implement your modules in the scripts/ folder:
+2026-03-31 17:18:30,791 - INFO -   - Prashansa: scripts/data_processing.py
+2026-03-31 17:18:30,791 - INFO -   - Aniket: scripts/feature_engineering.py
+2026-03-31 17:18:30,791 - INFO -   - Flavia: scripts/model_training.py
+2026-03-31 17:20:05,797 - ingestion - INFO - ============================================================
+2026-03-31 17:20:05,798 - ingestion - INFO - Starting RecoMart Data Ingestion Pipeline
+2026-03-31 17:20:05,798 - ingestion - INFO - ============================================================
+2026-03-31 17:20:05,798 - ingestion - INFO - Loading CSV from 2019-Oct.csv...
+2026-03-31 17:20:05,814 - ingestion - INFO - CSV loaded successfully: 30000 rows
+2026-03-31 17:20:05,853 - ingestion - INFO - Data saved successfully to data/raw/sample_data.csv
+2026-03-31 17:20:05,853 - ingestion - INFO - Using cached API data
+2026-03-31 17:20:05,854 - ingestion - INFO - ============================================================
+2026-03-31 17:20:05,854 - ingestion - INFO - Data Ingestion Pipeline completed successfully
+2026-03-31 17:20:05,854 - ingestion - INFO - Sample data: data/raw/sample_data.csv
+2026-03-31 17:20:05,854 - ingestion - INFO - API products: data/raw/api_products.csv
+2026-03-31 17:20:05,854 - ingestion - INFO - ============================================================
+2026-03-31 17:41:51,646 - ingestion - INFO - ============================================================
+2026-03-31 17:41:51,646 - ingestion - INFO - Starting RecoMart Data Ingestion Pipeline
+2026-03-31 17:41:51,646 - ingestion - INFO - ============================================================
+2026-03-31 17:41:51,647 - ingestion - INFO - Loading CSV from 2019-Oct.csv...
+2026-03-31 17:41:51,665 - ingestion - INFO - CSV loaded successfully: 30000 rows
+2026-03-31 17:41:51,706 - ingestion - INFO - Data saved successfully to data/raw/sample_data.csv
+2026-03-31 17:41:51,706 - ingestion - INFO - Using cached API data
+2026-03-31 17:41:51,707 - ingestion - INFO - ============================================================
+2026-03-31 17:41:51,707 - ingestion - INFO - Data Ingestion Pipeline completed successfully
+2026-03-31 17:41:51,707 - ingestion - INFO - Sample data: data/raw/sample_data.csv
+2026-03-31 17:41:51,707 - ingestion - INFO - API products: data/raw/api_products.csv
+2026-03-31 17:41:51,707 - ingestion - INFO - ============================================================
+2026-03-31 17:42:20,242 - ingestion - INFO - ============================================================
+2026-03-31 17:42:20,242 - ingestion - INFO - Starting RecoMart Data Ingestion Pipeline
+2026-03-31 17:42:20,242 - ingestion - INFO - ============================================================
+2026-03-31 17:42:20,242 - ingestion - INFO - Loading CSV from 2019-Oct.csv...
+2026-03-31 17:42:20,261 - ingestion - INFO - CSV loaded successfully: 30000 rows
+2026-03-31 17:42:20,299 - ingestion - INFO - Data saved successfully to data/raw/sample_data.csv
+2026-03-31 17:42:20,299 - ingestion - INFO - Using cached API data
+2026-03-31 17:42:20,300 - ingestion - INFO - ============================================================
+2026-03-31 17:42:20,300 - ingestion - INFO - Data Ingestion Pipeline completed successfully
+2026-03-31 17:42:20,300 - ingestion - INFO - Sample data: data/raw/sample_data.csv
+2026-03-31 17:42:20,300 - ingestion - INFO - API products: data/raw/api_products.csv
+2026-03-31 17:42:20,300 - ingestion - INFO - ============================================================
+2026-03-31 17:42:47,044 - ingestion - INFO - ============================================================
+2026-03-31 17:42:47,044 - ingestion - INFO - Starting RecoMart Data Ingestion Pipeline
+2026-03-31 17:42:47,044 - ingestion - INFO - ============================================================
+2026-03-31 17:42:47,044 - ingestion - INFO - Loading CSV from 2019-Oct.csv...
+2026-03-31 17:42:47,060 - ingestion - INFO - CSV loaded successfully: 30000 rows
+2026-03-31 17:42:47,105 - ingestion - INFO - Data saved successfully to data/raw/sample_data.csv
+2026-03-31 17:42:47,105 - ingestion - INFO - Using cached API data
+2026-03-31 17:42:47,107 - ingestion - INFO - ============================================================
+2026-03-31 17:42:47,108 - ingestion - INFO - Data Ingestion Pipeline completed successfully
+2026-03-31 17:42:47,108 - ingestion - INFO - Sample data: data/raw/sample_data.csv
+2026-03-31 17:42:47,108 - ingestion - INFO - API products: data/raw/api_products.csv
+2026-03-31 17:42:47,108 - ingestion - INFO - ============================================================
