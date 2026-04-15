@@ -163,7 +163,7 @@ def run_model_training():
     try:
         print("Running Recommendation Pipeline...")
 
-        df = load_data("data/processed/cleaned_data.csv")
+        df = load_data("data/processed/features.csv")
 
         train_df, test_df = train_test_split(df, test_size=0.2, random_state=42)
 
@@ -177,10 +177,11 @@ def run_model_training():
         save_model(preds_df)
         save_results(precision, recall)
 
-        print("✅ Pipeline completed successfully!")
+        print(" Pipeline completed successfully!")
 
     except Exception as e:
         tb = traceback.extract_tb(e.__traceback__)
         line_number = tb[-1].lineno
-        print(f"❌ Error at line {line_number}: {str(e)}")
+        print(f" Error at line {line_number}: {str(e)}")
         traceback.print_exc()
+        raise e  

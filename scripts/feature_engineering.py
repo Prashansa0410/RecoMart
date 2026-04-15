@@ -119,11 +119,11 @@ def run_feature_engineering():
         # Save CSV
         feature_df.to_csv(output_path, index=False)
 
-        print("✅ feature_data.csv created successfully!")
+        print("features.csv created successfully!")
         print("===== FEATURE ENGINEERING COMPLETED =====\n")
 
     except Exception as e:
-        print("❌ ERROR:", str(e))
+        print(" ERROR:", str(e))
         raise
 
 

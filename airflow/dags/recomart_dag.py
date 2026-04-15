@@ -126,7 +126,7 @@ t2_validate = PythonOperator(
 )
 
 t3_prepare = PythonOperator(
-    task_id='preparation_and_features',
+    task_id='feature_engineering',
     python_callable=lambda **kw: _run_script('feature_engineering.py', **kw),
     dag=dag,
 )

@@ -10,7 +10,7 @@ PROJECT_ROOT = Path(__file__).parent
 DATA_DIR = PROJECT_ROOT / "data"
 RAW_DATA_DIR = DATA_DIR / "raw"
 PROCESSED_DATA_DIR = DATA_DIR / "processed"
-FEATURES_DATA_DIR = DATA_DIR / "features"
+FEATURES_DATA_DIR = DATA_DIR / "processed"
 LOGS_DIR = PROJECT_ROOT / "logs"
 REPORTS_DIR = PROJECT_ROOT / "reports"
 MODELS_DIR = PROJECT_ROOT / "models"
@@ -21,7 +21,7 @@ NOTEBOOKS_DIR = PROJECT_ROOT / "notebooks"
 SAMPLE_DATA_FILE = RAW_DATA_DIR / "sample_data.csv"
 API_PRODUCTS_FILE = RAW_DATA_DIR / "api_products.csv"
 CLEANED_DATA_FILE = PROCESSED_DATA_DIR / "cleaned_data.csv"
-FEATURE_DATA_FILE = FEATURES_DATA_DIR / "feature_data.csv"
+FEATURE_DATA_FILE = FEATURES_DATA_DIR / "features.csv"
 
 # API Configuration
 API_ENDPOINT = "https://fakestoreapi.com/products"
