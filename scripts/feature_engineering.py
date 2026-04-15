@@ -1,150 +1,132 @@
 """
 RecoMart Feature Engineering Pipeline
 Person: Aniket
-Input: /data/processed/cleaned_data.csv
-Output: /data/features/feature_data.csv
 
-FEATURES TO CREATE:
-1. purchase_count: Number of purchases per user
-2. user_activity: User interaction frequency
-3. product_popularity: How many times a product was purchased
-
-Feature Definition:
-- purchase_count: Aggregated by user_id
-- user_activity: Events per user in time window
-- product_popularity: Events per product in time window
+Input: data/processed/cleaned_data.csv
+Output: data/features/feature_data.csv
 """
 
 import pandas as pd
-import numpy as np
 from pathlib import Path
-import logging
 import sys
+import os
+import ast
 
+# Add project root
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from config import CLEANED_DATA_FILE, FEATURE_DATA_FILE, LOGS_DIR
-from utils import setup_logger, save_dataframe
-
-logger = setup_logger('features', LOGS_DIR / 'features.log')
+from config import CLEANED_DATA_FILE, FEATURE_DATA_FILE
 
 
-def load_cleaned_data():
-    """Load cleaned data"""
-    logger.info("Loading cleaned data...")
-    df = pd.read_csv(CLEANED_DATA_FILE)
-    logger.info(f"Loaded: {len(df)} rows")
-    return df
+def run_feature_engineering():
+    print("\n===== FEATURE ENGINEERING STARTED =====")
 
-
-def create_purchase_count(df):
-    """
-    Feature: purchase_count
-    Count of purchases per user
-    """
-    logger.info("Creating purchase_count feature...")
-    
-    purchase_count = df.groupby('user_id').size().reset_index(name='purchase_count')
-    
-    logger.info(f"Created purchase_count for {len(purchase_count)} users")
-    return purchase_count
-
-
-def create_user_activity(df):
-    """
-    Feature: user_activity
-    User interaction frequency (events per user)
-    """
-    logger.info("Creating user_activity feature...")
-    
-    user_activity = df.groupby('user_id').agg({
-        'product_id': 'count',
-        'event_time': ['min', 'max']
-    }).reset_index()
-    
-    user_activity.columns = ['user_id', 'activity_events', 'first_event', 'last_event']
-    
-    logger.info(f"Created user_activity for {len(user_activity)} users")
-    return user_activity
-
-
-def create_product_popularity(df):
-    """
-    Feature: product_popularity
-    How many times each product was purchased
-    """
-    logger.info("Creating product_popularity feature...")
-    
-    product_popularity = df.groupby('product_id').agg({
-        'user_id': 'count',
-        'price': 'mean',
-        'rating': 'mean'
-    }).reset_index()
-    
-    product_popularity.columns = ['product_id', 'popularity_count', 'avg_price', 'avg_rating']
-    
-    logger.info(f"Created product_popularity for {len(product_popularity)} products")
-    return product_popularity
-
-
-def combine_features(df, purchase_count, user_activity, product_popularity):
-    """
-    Combine all features into single feature DataFrame
-    
-    Strategy:
-    - Merge purchase_count with user_activity on user_id
-    - Merge product_popularity with main df on product_id
-    """
-    logger.info("Combining features...")
-    
-    # User features
-    user_features = pd.merge(purchase_count, user_activity, on='user_id', how='left')
-    
-    # Add user features to main df
-    feature_df = pd.merge(df, user_features, on='user_id', how='left')
-    
-    # Add product features
-    feature_df = pd.merge(feature_df, product_popularity, on='product_id', how='left')
-    
-    logger.info(f"Combined feature DataFrame: {len(feature_df)} rows, {len(feature_df.columns)} columns")
-    
-    return feature_df
-
-
-def feature_engineering_pipeline():
-    """
-    Execute feature engineering pipeline
-    
-    Output: /data/features/feature_data.csv
-    """
-    logger.info("="*60)
-    logger.info("Starting Feature Engineering Pipeline (Aniket)")
-    logger.info("="*60)
-    
     try:
-        # Load cleaned data
-        df = load_cleaned_data()
-        
-        # Create features
-        purchase_count = create_purchase_count(df)
-        user_activity = create_user_activity(df)
-        product_popularity = create_product_popularity(df)
-        
+        # -------------------------------
+        # Load data
+        # -------------------------------
+        print("Loading cleaned data...")
+        df = pd.read_csv(CLEANED_DATA_FILE)
+
+        print("Rows loaded:", len(df))
+
+        # -------------------------------
+        # Fix datetime
+        # -------------------------------
+        if 'event_time' in df.columns:
+            df['event_time'] = pd.to_datetime(df['event_time'], errors='coerce')
+
+        # -------------------------------
+        # 🔥 FIX: Convert rating to numeric
+        # -------------------------------
+        if 'rating' in df.columns:
+            print("Fixing rating column...")
+
+            # Convert string → dict
+            df['rating'] = df['rating'].apply(
+                lambda x: ast.literal_eval(x) if isinstance(x, str) else x
+            )
+
+            # Extract 'rate'
+            df['rating'] = df['rating'].apply(
+                lambda x: x.get('rate') if isinstance(x, dict) else x
+            )
+
+            df['rating'] = pd.to_numeric(df['rating'], errors='coerce')
+
+            print("Rating converted to numeric")
+
+        # -------------------------------
+        # Feature 1: purchase_count
+        # -------------------------------
+        print("Creating purchase_count...")
+        purchase_count = df.groupby('user_id').size().reset_index(name='purchase_count')
+
+        # -------------------------------
+        # Feature 2: user_activity
+        # -------------------------------
+        print("Creating user_activity...")
+        user_activity = df.groupby('user_id').agg(
+            activity_events=('product_id', 'count'),
+            first_event=('event_time', 'min'),
+            last_event=('event_time', 'max')
+        ).reset_index()
+
+        # -------------------------------
+        # Feature 3: product_popularity
+        # -------------------------------
+        print("Creating product_popularity...")
+
+        agg_dict = {
+            'user_id': 'count',
+            'price': 'mean'
+        }
+
+        if 'rating' in df.columns:
+            agg_dict['rating'] = 'mean'
+
+        product_popularity = df.groupby('product_id').agg(agg_dict).reset_index()
+
+        product_popularity.rename(columns={
+            'user_id': 'popularity_count',
+            'price': 'avg_price',
+            'rating': 'avg_rating'
+        }, inplace=True)
+
+        # -------------------------------
         # Combine features
-        feature_df = combine_features(df, purchase_count, user_activity, product_popularity)
-        
-        # Save features
-        save_dataframe(feature_df, FEATURE_DATA_FILE)
-        
-        logger.info("="*60)
-        logger.info("✅ Feature Engineering pipeline completed!")
-        logger.info(f"✅ Output: {FEATURE_DATA_FILE}")
-        logger.info("="*60)
-        
+        # -------------------------------
+        print("Combining features...")
+
+        user_features = pd.merge(purchase_count, user_activity, on='user_id', how='left')
+
+        feature_df = pd.merge(df, user_features, on='user_id', how='left')
+        feature_df = pd.merge(feature_df, product_popularity, on='product_id', how='left')
+
+        print("Final shape:", feature_df.shape)
+
+        # -------------------------------
+        # Save file
+        # -------------------------------
+        output_path = Path(FEATURE_DATA_FILE)
+
+        print("Saving file to:", output_path)
+        print("Absolute path:", os.path.abspath(output_path))
+
+        # Ensure directory exists
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+
+        # Save CSV
+        feature_df.to_csv(output_path, index=False)
+
+        print("✅ feature_data.csv created successfully!")
+        print("===== FEATURE ENGINEERING COMPLETED =====\n")
+
     except Exception as e:
-        logger.error(f"❌ Pipeline failed: {str(e)}")
+        print("❌ ERROR:", str(e))
         raise
 
 
+# Allow standalone run
 if __name__ == "__main__":
-    feature_engineering_pipeline()
+    run_feature_engineering()
