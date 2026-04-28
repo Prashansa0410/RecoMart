@@ -10,10 +10,10 @@ import os
 import subprocess
 import sys
 from datetime import datetime, timedelta
+import types
 
 from airflow import DAG
-from airflow.providers.standard.operators.python import PythonOperator
-from types import SimpleNamespace
+from airflow.operators.python import PythonOperator
 
 # ── Configuration ─────────────────────────────────────────────────────────────
 PIPELINE_SRC = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..',  '..','scripts')
